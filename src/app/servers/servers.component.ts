@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus = "No server was created !";
-  serverName = 'testServer';
+  serverName = '';
   
   //Constructor is the function that runs as soon as Angular App is spun up.
   constructor() {
@@ -18,7 +18,7 @@ export class ServersComponent {
   }
 
   onCreateServer () {
-    this.serverCreationStatus = "Server Created !"
+    this.serverCreationStatus = 'Server Created ! The name is: ' + this.serverName;
   }
 
   onUpdateServerName (event : Event) {
