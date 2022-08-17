@@ -10,6 +10,7 @@ export class ServersComponent {
   serverCreationStatus = "No server was created !";
   serverName = '';
   serverCreated = false;
+  servers = ['TestServer1', 'TestServer2'];
   
   //Constructor is the function that runs as soon as Angular App is spun up.
   constructor() {
@@ -21,6 +22,7 @@ export class ServersComponent {
   onCreateServer () {
     this.serverCreated = true;
     this.serverCreationStatus = 'Server Created ! The name is: ' + this.serverName;
+    this.servers.push(this.serverName);
     
   }
 
